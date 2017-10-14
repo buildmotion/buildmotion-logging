@@ -1,6 +1,6 @@
 {
   "name": "buildmotion-logging",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://build-hybridmobileapp-net.visualstudio.com/_git/BuildMotion.Commerce"
+    "url": "https://github.com/buildmotion/buildmotion-logging"
   },
   "keywords": [
     "buildmotion",
