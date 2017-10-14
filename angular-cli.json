@@ -1,0 +1,17 @@
+{
+    "project": {
+        "version": "1.0.0",
+        "name": "buildmotion-logging"
+    },
+    "apps": [{
+        "tsconfig": "tsconfig.json",
+        "mobile": false,
+        "root": "src",
+        "prefix": "buildmotion-logging"
+    }],
+    "defaults": {
+        "styleExt": "css",
+        "prefixInterfaces": false,
+        "lazyRoutePrefix": "+"
+    }
+}
