@@ -1,37 +1,40 @@
 {
     "name": "buildmotion-logging",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
     "main": "index.js",
     "scripts": {
-        "transpile": "ngc",
-        "build": "npm run transpile"
+      "transpile": "ngc",
+      "build": "npm run transpile"
     },
     "repository": {
-        "type": "git",
-        "url": "https://github.com/buildmotion/buildmotion-logging"
+      "type": "git",
+      "url": "https://github.com/buildmotion/buildmotion-logging"
     },
     "keywords": [
-        "buildmotion",
-        "Angular",
-        "framework",
-        "stooges"
+      "buildmotion",
+      "Angular",
+      "framework",
+      "Matt Vaughn",
+      "stooges"
     ],
     "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-    "license": "SEE LICENSE IN license.txt",
+    "license": "MIT",
     "dependencies": {
-        "angular-rules-engine": "^0.0.27",
-        "@angular/http": "^2.3.1",
-        "@angular/router": "^3.3.1"
+      "angular-rules-engine": "^1.1.0",
+      "@angular/http": "^2.3.1",
+      "@angular/router": "^3.3.1"
     },
     "devDependencies": {
-        "@angular/cli": "^1.4.2",
-        "@angular/common": "^4.4.3",
-        "@angular/compiler": "^4.4.3",
-        "@angular/compiler-cli": "^4.4.3",
-        "@angular/core": "^4.4.3",
-        "@angular/http": "^2.3.1",
-        "@angular/router": "^3.3.1",
-        "rxjs": "^5.0.1"
+      "@angular/cli": "^1.4.2",
+      "@angular/common": "^4.4.3",
+      "@angular/compiler": "^4.4.3",
+      "@angular/compiler-cli": "^4.4.3",
+      "@angular/core": "^4.4.3",
+      "@angular/http": "^2.3.1",
+      "@angular/router": "^3.3.1",
+      "angular-rules-engine": "^1.1.0",
+      "rxjs": "^5.0.1"
     }
-}
+  }
+  

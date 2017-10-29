@@ -1,5 +1,8 @@
+import { loggingServiceConfig } from './index';
 import { Severity } from './severity.enum';
 export declare class LoggingService {
+    private config;
+    applicationName: string;
     serviceName: string;
     source: string;
     severity: Severity;
@@ -8,7 +11,7 @@ export declare class LoggingService {
     /**
      * The [LoggingService] constructor.
      */
-    constructor();
+    constructor(config: loggingServiceConfig);
     /**
      * Use this method to send a log message with severity and source information
      * to the application's logger.

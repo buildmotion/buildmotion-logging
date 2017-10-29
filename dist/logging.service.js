@@ -1,18 +1,18 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
+import { loggingServiceConfig } from './index';
 import { Severity } from './severity.enum';
-var LoggingService = (function () {
+var LoggingService = /** @class */ (function () {
     /**
      * The [LoggingService] constructor.
      */
-    function LoggingService() {
+    function LoggingService(config) {
+        this.config = config;
+        this.applicationName = 'AngularApplication';
         this.serviceName = 'LoggingService';
         this.log(this.serviceName, Severity.Information, "Starting logging service at: " + this.timestamp);
+        if (config && config.applicationName) {
+            this.applicationName = config.applicationName;
+        }
     }
     /**
      * Use this method to send a log message with severity and source information
@@ -26,16 +26,20 @@ var LoggingService = (function () {
      * @param message
      */
     LoggingService.prototype.log = function (source, severity, message) {
-        this.source = source;
+        this.source = this.applicationName + "." + source;
         this.severity = severity;
         this.message = message;
         this.timestamp = new Date();
         var msg = "" + this.message;
         console.log(this.severity + " from " + this.source + ": " + msg + " (" + this.timestamp + ")");
     };
-    LoggingService = __decorate([
-        Injectable()
-    ], LoggingService);
+    LoggingService.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    LoggingService.ctorParameters = function () { return [
+        { type: loggingServiceConfig, decorators: [{ type: Optional },] },
+    ]; };
     return LoggingService;
 }());
 export { LoggingService };

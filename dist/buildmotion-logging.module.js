@@ -1,23 +1,28 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-var BuildmotionLoggingModule = (function () {
-    function BuildmotionLoggingModule() {
+import { loggingServiceConfig } from './index';
+var BuildMotionLoggingModule = /** @class */ (function () {
+    function BuildMotionLoggingModule() {
     }
-    BuildmotionLoggingModule = __decorate([
-        NgModule({
-            imports: [
-                CommonModule
-            ],
-            declarations: []
-        })
-    ], BuildmotionLoggingModule);
-    return BuildmotionLoggingModule;
+    BuildMotionLoggingModule.forRoot = function (config) {
+        return {
+            ngModule: BuildMotionLoggingModule,
+            providers: [
+                { provide: loggingServiceConfig, useValue: config }
+            ]
+        };
+    };
+    BuildMotionLoggingModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CommonModule
+                    ],
+                    declarations: []
+                },] },
+    ];
+    /** @nocollapse */
+    BuildMotionLoggingModule.ctorParameters = function () { return []; };
+    return BuildMotionLoggingModule;
 }());
-export { BuildmotionLoggingModule };
+export { BuildMotionLoggingModule };
 //# sourceMappingURL=buildmotion-logging.module.js.map
