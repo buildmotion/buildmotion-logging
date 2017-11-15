@@ -3,10 +3,7 @@
   "version": "1.1.0",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
   "main": "index.js",
-  "scripts": {
-    "transpile": "ngc",
-    "build": "npm run transpile"
-  },
+  "typings": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/buildmotion/buildmotion-logging"
@@ -18,22 +15,14 @@
     "Matt Vaughn",
     "stooges"
   ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "dependencies": {
-    "angular-rules-engine": "^1.1.0",
-    "@angular/http": "^2.3.1",
-    "@angular/router": "^3.3.1"
+  "author": {
+    "name": "Matt Vaughn",
+    "email": "matt.vaughn@buildmotion.com",
+    "url": "http://www.buildmotion.com"
   },
-  "devDependencies": {
-    "@angular/cli": "^1.4.2",
+  "license": "MIT",
+  "peerDependencies": {
     "@angular/common": "^4.4.3",
-    "@angular/compiler": "^4.4.3",
-    "@angular/compiler-cli": "^4.4.3",
-    "@angular/core": "^4.4.3",
-    "@angular/http": "^2.3.1",
-    "@angular/router": "^3.3.1",
-    "angular-rules-engine": "^1.1.0",
-    "rxjs": "^5.0.1"
+    "@angular/core": "^4.4.3"
   }
 }

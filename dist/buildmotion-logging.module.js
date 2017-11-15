@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { loggingServiceConfig } from './index';
+import { loggingServiceConfig } from './logging.service.config';
 var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
     }
@@ -14,9 +13,7 @@ var BuildMotionLoggingModule = /** @class */ (function () {
     };
     BuildMotionLoggingModule.decorators = [
         { type: NgModule, args: [{
-                    imports: [
-                        CommonModule
-                    ],
+                    imports: [],
                     declarations: []
                 },] },
     ];

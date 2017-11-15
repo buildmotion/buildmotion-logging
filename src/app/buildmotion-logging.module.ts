@@ -1,13 +1,8 @@
-
-
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { loggingServiceConfig } from './index'
+import { loggingServiceConfig } from './logging.service.config'
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [],
   declarations: []
 })
 export class BuildMotionLoggingModule { 

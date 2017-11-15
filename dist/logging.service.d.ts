@@ -1,4 +1,4 @@
-import { loggingServiceConfig } from './index';
+import { loggingServiceConfig } from './logging.service.config';
 import { Severity } from './severity.enum';
 export declare class LoggingService {
     private config;

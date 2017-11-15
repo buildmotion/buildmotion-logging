@@ -1,6 +1,6 @@
 import { Injectable, Optional } from '@angular/core';
 
-import { loggingServiceConfig } from './index';
+import { loggingServiceConfig } from './logging.service.config';
 import { Severity } from './severity.enum';
 
 @Injectable()
@@ -10,7 +10,7 @@ export class LoggingService {
     source: string;
     severity: Severity;
     message: string;
-    private timestamp;
+    private timestamp: Date;
 
     /**
      * The [LoggingService] constructor.
