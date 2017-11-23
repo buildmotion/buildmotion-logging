@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { loggingServiceConfig } from './logging.service.config';
 var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
@@ -11,14 +11,6 @@ var BuildMotionLoggingModule = /** @class */ (function () {
             ]
         };
     };
-    BuildMotionLoggingModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [],
-                    declarations: []
-                },] },
-    ];
-    /** @nocollapse */
-    BuildMotionLoggingModule.ctorParameters = function () { return []; };
     return BuildMotionLoggingModule;
 }());
 export { BuildMotionLoggingModule };

@@ -1,38 +1,38 @@
 {
-    "name": "buildmotion-logging",
-    "version": "1.0.4",
-    "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
-    "main": "index.js",
-    "scripts": {
-      "transpile": "ngc",
-      "build": "npm run transpile"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/buildmotion/buildmotion-logging"
-    },
-    "keywords": [
-      "buildmotion",
-      "Angular",
-      "framework",
-      "Matt Vaughn",
-      "stooges"
-    ],
-    "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-    "license": "MIT",
-    "dependencies": {
-      "@angular/core": "^5.0.1"
-    },
-    "devDependencies": {
-      "@angular/cli": "^1.4.2",
-      "@angular/common": "^4.4.3",
-      "@angular/compiler": "^4.4.3",
-      "@angular/compiler-cli": "^4.4.3",
-      "@angular/core": "^4.4.3",
-      "@angular/http": "^2.3.1",
-      "@angular/router": "^3.3.1",
-      "angular-rules-engine": "^1.1.0",
-      "rxjs": "^5.0.1"
-    }
+  "name": "buildmotion-logging",
+  "version": "1.0.4",
+  "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/buildmotion-logging.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/buildmotion-logging.umd.min.js",
+    "build": "npm run transpile && npm run package && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion-logging"
+  },
+  "keywords": [
+    "buildmotion",
+    "Angular",
+    "framework",
+    "Matt Vaughn",
+    "stooges"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "^5.0.1"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.0",
+    "@angular/compiler": "^5.0.1",
+    "@angular/compiler-cli": "^5.0.1",
+    "@angular/core": "^5.0.1",
+    "rollup": "^0.50.0",
+    "tslint": "4.5.1",
+    "typescript": "^2.4.2",
+    "uglify-js": "^3.1.10"
   }
-  
+}

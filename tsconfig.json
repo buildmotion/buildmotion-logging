@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "",
         "declaration": true,
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "inlineSources": true,
         "lib": ["es2015","dom"],
         "module": "es2015",
         "moduleResolution": "node",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "outDir": "dist",
         "paths": {"@angular/core": ["node_modules/@angular/core/*"]
         },
@@ -22,6 +23,7 @@
         "./src/app/index.ts"
     ],
     "angularCompilerOptions": {
+        "skipTemplateCodegen": true,
         "strictMetadataEmit": true,
         "genDir": "aot-dist"
     }
