@@ -1,9 +1,11 @@
 {
   "name": "buildmotion-logging",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "bundles/buildmotion-logging.umd.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/buildmotion/buildmotion-logging"
