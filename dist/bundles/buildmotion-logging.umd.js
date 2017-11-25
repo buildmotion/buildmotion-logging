@@ -87,6 +87,14 @@ var BuildMotionLoggingModule = /** @class */ (function () {
                     schemas: [core.NO_ERRORS_SCHEMA],
                 },] },
     ];
+    BuildMotionLoggingModule.forRoot = function (config) {
+        return {
+            ngModule: BuildMotionLoggingModule,
+            providers: [
+                { provide: loggingServiceConfig, useValue: config }
+            ]
+        };
+    };
     return BuildMotionLoggingModule;
 }());
 

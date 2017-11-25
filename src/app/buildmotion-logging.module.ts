@@ -6,17 +6,17 @@ import { LoggingService } from './logging.service'
 @NgModule({
   imports: [CommonModule],
   declarations: [],
-  exports: [LoggingService],
+  exports: [],
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class BuildMotionLoggingModule {
 
-  // static forRoot(config: loggingServiceConfig): ModuleWithProviders {
-  //   return {
-  //     ngModule: BuildMotionLoggingModule,
-  //     providers: [
-  //       {provide: loggingServiceConfig, useValue: config }
-  //     ]
-  //   };
-  // }
+  static forRoot(config: loggingServiceConfig): ModuleWithProviders {
+    return {
+      ngModule: BuildMotionLoggingModule,
+      providers: [
+        {provide: loggingServiceConfig, useValue: config }
+      ]
+    };
+  }
 }
