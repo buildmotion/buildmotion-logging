@@ -5,8 +5,7 @@
 }(this, (function (exports,core,common) { 'use strict';
 
 var loggingServiceConfig = /** @class */ (function () {
-    function loggingServiceConfig(applicationName) {
-        this.applicationName = applicationName;
+    function loggingServiceConfig() {
     }
     return loggingServiceConfig;
 }());
@@ -23,7 +22,9 @@ var LoggingService = /** @class */ (function () {
     /**
      * The [LoggingService] constructor.
      */
-    function LoggingService(config) {
+    function LoggingService(
+        // @Optional() private config: loggingServiceConfig
+        config) {
         this.config = config;
         this.log(this.serviceName, exports.Severity.Information, "Starting logging service at: " + this.timestamp);
         if (config && config.applicationName) {
@@ -78,14 +79,16 @@ var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
     }
     BuildMotionLoggingModule.decorators = [
-        { type: core.NgModule, args: [{
-                    imports: [
-                        common.CommonModule
-                    ],
-                    declarations: [],
-                    exports: [],
-                    schemas: [core.NO_ERRORS_SCHEMA],
-                },] },
+        {
+            type: core.NgModule, args: [{
+                imports: [
+                    common.CommonModule
+                ],
+                declarations: [],
+                exports: [],
+                schemas: [core.NO_ERRORS_SCHEMA],
+            },]
+        },
     ];
     BuildMotionLoggingModule.forRoot = function (config) {
         return {

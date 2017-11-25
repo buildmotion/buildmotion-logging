@@ -27,15 +27,25 @@ var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
     }
     BuildMotionLoggingModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule
-                    ],
-                    declarations: [],
-                    exports: [],
-                    schemas: [NO_ERRORS_SCHEMA],
-                },] },
+        {
+            type: NgModule, args: [{
+                imports: [
+                    CommonModule
+                ],
+                declarations: [],
+                exports: [],
+                schemas: [NO_ERRORS_SCHEMA],
+            },]
+        },
     ];
+    BuildMotionLoggingModule.forRoot = function (config) {
+        return {
+            ngModule: BuildMotionLoggingModule,
+            providers: [
+                { provide: loggingServiceConfig, useValue: config }
+            ]
+        };
+    };
     return BuildMotionLoggingModule;
 }());
 export { BuildMotionLoggingModule };

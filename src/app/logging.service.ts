@@ -16,7 +16,8 @@ export class LoggingService {
      * The [LoggingService] constructor.
      */
     constructor(
-        @Optional() private config: loggingServiceConfig
+        // @Optional() private config: loggingServiceConfig
+        private config: loggingServiceConfig
     ) {
         this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
         if(config && config.applicationName) {

@@ -1,5 +1,4 @@
 export class loggingServiceConfig {
 
-    constructor(public applicationName: string) {
-    }
+    public applicationName: string = 'APP_NAME_NOT_PROVIDED';
 }

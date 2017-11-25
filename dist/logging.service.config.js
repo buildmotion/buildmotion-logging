@@ -1,6 +1,5 @@
 var loggingServiceConfig = /** @class */ (function () {
-    function loggingServiceConfig(applicationName) {
-        this.applicationName = applicationName;
+    function loggingServiceConfig() {
     }
     return loggingServiceConfig;
 }());

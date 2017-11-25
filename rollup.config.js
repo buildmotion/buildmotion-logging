@@ -7,8 +7,6 @@ export default {
 	external: ['@angular/core', '@angular/common'],
 	globals: {
 		'@angular/core': 'ng.core',
-		'@angular/core/Injectable': 'ng.core/Injectable/prototype',
-		'@angular/core/Optional': 'ng.core/Optional/prototype',
 		'@angular/common': 'ng.common',
 	}
 }

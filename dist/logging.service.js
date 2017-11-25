@@ -5,7 +5,9 @@ var LoggingService = /** @class */ (function () {
     /**
      * The [LoggingService] constructor.
      */
-    function LoggingService(config) {
+    function LoggingService(
+        // @Optional() private config: loggingServiceConfig
+        config) {
         this.config = config;
         this.log(this.serviceName, Severity.Information, "Starting logging service at: " + this.timestamp);
         if (config && config.applicationName) {
