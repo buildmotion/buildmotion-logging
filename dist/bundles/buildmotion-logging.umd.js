@@ -4,12 +4,6 @@
 	(factory((global.buildmotionLogging = {}),global.ng.core,global.ng.common));
 }(this, (function (exports,core,common) { 'use strict';
 
-var loggingServiceConfig = /** @class */ (function () {
-    function loggingServiceConfig() {
-    }
-    return loggingServiceConfig;
-}());
-
 (function (Severity) {
     Severity[Severity["Information"] = 1] = "Information";
     Severity[Severity["Warning"] = 2] = "Warning";
@@ -24,11 +18,11 @@ var LoggingService = /** @class */ (function () {
      */
     function LoggingService(
         // @Optional() private config: loggingServiceConfig
-        config) {
-        this.config = config;
+        // @Optional() private config: loggingServiceConfig
+        applicationName) {
         this.log(this.serviceName, exports.Severity.Information, "Starting logging service at: " + this.timestamp);
-        if (config && config.applicationName) {
-            this.applicationName = config.applicationName;
+        if (applicationName) {
+            this.applicationName = applicationName;
         }
     }
     /**
@@ -90,11 +84,11 @@ var BuildMotionLoggingModule = /** @class */ (function () {
             },]
         },
     ];
-    BuildMotionLoggingModule.forRoot = function (config) {
+    BuildMotionLoggingModule.forRoot = function (applicationName) {
         return {
             ngModule: BuildMotionLoggingModule,
             providers: [
-                { provide: loggingServiceConfig, useValue: config }
+                { provide: String, useValue: applicationName }
             ]
         };
     };
@@ -103,7 +97,6 @@ var BuildMotionLoggingModule = /** @class */ (function () {
 
 exports.BuildMotionLoggingModule = BuildMotionLoggingModule;
 exports.LoggingService = LoggingService;
-exports.loggingServiceConfig = loggingServiceConfig;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

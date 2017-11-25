@@ -7,11 +7,11 @@ var LoggingService = /** @class */ (function () {
      */
     function LoggingService(
         // @Optional() private config: loggingServiceConfig
-        config) {
-        this.config = config;
+        // @Optional() private config: loggingServiceConfig
+        applicationName) {
         this.log(this.serviceName, Severity.Information, "Starting logging service at: " + this.timestamp);
-        if (config && config.applicationName) {
-            this.applicationName = config.applicationName;
+        if (applicationName) {
+            this.applicationName = applicationName;
         }
     }
     /**

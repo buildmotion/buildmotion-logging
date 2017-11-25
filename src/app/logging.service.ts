@@ -17,11 +17,11 @@ export class LoggingService {
      */
     constructor(
         // @Optional() private config: loggingServiceConfig
-        private config: loggingServiceConfig
+        applicationName: string
     ) {
         this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
-        if(config && config.applicationName) {
-            this.applicationName = config.applicationName;
+        if(applicationName) {
+            this.applicationName = applicationName;
         }
     }
 

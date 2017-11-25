@@ -17,11 +17,11 @@ var BuildMotionLoggingModule = /** @class */ (function () {
             },]
         },
     ];
-    BuildMotionLoggingModule.forRoot = function (config) {
+    BuildMotionLoggingModule.forRoot = function (applicationName) {
         return {
             ngModule: BuildMotionLoggingModule,
             providers: [
-                { provide: loggingServiceConfig, useValue: config }
+                { provide: String, useValue: applicationName }
             ]
         };
     };

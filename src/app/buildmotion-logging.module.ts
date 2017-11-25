@@ -11,11 +11,11 @@ import { LoggingService } from './logging.service'
 })
 export class BuildMotionLoggingModule {
 
-  static forRoot(config: loggingServiceConfig): ModuleWithProviders {
+  static forRoot(applicationName: string): ModuleWithProviders {
     return {
       ngModule: BuildMotionLoggingModule,
       providers: [
-        {provide: loggingServiceConfig, useValue: config }
+        {provide: String, useValue: applicationName }
       ]
     };
   }
