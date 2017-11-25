@@ -1,28 +1,14 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
-	(factory((global.buildmotionLogging = {}),global.ng.core));
-}(this, (function (exports,core) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/common'], factory) :
+	(factory((global.buildmotionLogging = {}),global.ng.core,global.ng.common));
+}(this, (function (exports,core,common) { 'use strict';
 
 var loggingServiceConfig = /** @class */ (function () {
     function loggingServiceConfig(applicationName) {
         this.applicationName = applicationName;
     }
     return loggingServiceConfig;
-}());
-
-var BuildMotionLoggingModule = /** @class */ (function () {
-    function BuildMotionLoggingModule() {
-    }
-    BuildMotionLoggingModule.forRoot = function (config) {
-        return {
-            ngModule: BuildMotionLoggingModule,
-            providers: [
-                { provide: loggingServiceConfig, useValue: config }
-            ]
-        };
-    };
-    return BuildMotionLoggingModule;
 }());
 
 (function (Severity) {
@@ -86,6 +72,22 @@ var LoggingService = /** @class */ (function () {
         console.log(this.severity + " from " + this.source + ": " + msg + " (" + this.timestamp + ")");
     };
     return LoggingService;
+}());
+
+var BuildMotionLoggingModule = /** @class */ (function () {
+    function BuildMotionLoggingModule() {
+    }
+    BuildMotionLoggingModule.decorators = [
+        { type: core.NgModule, args: [{
+                    imports: [
+                        common.CommonModule
+                    ],
+                    declarations: [],
+                    exports: [],
+                    schemas: [core.NO_ERRORS_SCHEMA],
+                },] },
+    ];
+    return BuildMotionLoggingModule;
 }());
 
 exports.BuildMotionLoggingModule = BuildMotionLoggingModule;
