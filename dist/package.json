@@ -2,10 +2,18 @@
   "name": "buildmotion-logging",
   "version": "2.0.7",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
-  "main": "bundles/buildmotion-logging.umd.js",
-  "module": "index.js",
+  "main": "index.js",
+  "module": "./buildmotion-logging.js",
   "jsnext:main": "index.js",
   "types": "index.d.ts",
+  "scripts": {
+    "transpile": "ngc",
+    "build": "npm run clean && npm run transpile && npm run move",
+    "clean": "npm run clean:dist",
+    "clean:dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./remove-dist-dir.ps1",
+    "move": "npm run move:assets",
+    "move:assets": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./move-assets.ps1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/buildmotion/buildmotion-logging"
@@ -17,14 +25,23 @@
     "Matt Vaughn",
     "stooges"
   ],
-  "author": {
-    "name": "Matt Vaughn",
-    "email": "matt.vaughn@buildmotion.com",
-    "url": "http://www.buildmotion.com"
-  },
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/core": "^5.0.2",
-    "@angular/common": "^5.0.2"
+    "@angular/common": "^5.0.2",
+    "@angular/core": "^5.0.2"
+  },
+  "dependencies": {
+    "@angular/common": "^5.0.2",
+    "@angular/core": "^5.0.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.2",
+    "@angular/compiler": "^5.0.2",
+    "@angular/compiler-cli": "^5.0.2",
+    "rollup": "^0.50.0",
+    "tslint": "4.5.1",
+    "typescript": "^2.4.2",
+    "uglify-js": "^3.1.10"
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"buildmotion-logging.js","sourceRoot":"","sources":["../src/app/buildmotion-logging.ts"],"names":[],"mappings":";;;;;;;AAIA,6EAAwB","sourcesContent":["/**\n * Generated bundle index. Do not edit.\n */\n\nexport * from './index';\n"]}

@@ -1,13 +1,18 @@
 {
   "name": "buildmotion-logging",
-  "version": "1.0.4",
+  "version": "2.0.7",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
   "main": "index.js",
+  "module": "./buildmotion-logging.js",
+  "jsnext:main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "transpile": "ngc",
-    "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/buildmotion-logging.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/buildmotion-logging.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify"
+    "build": "npm run clean && npm run transpile && npm run move",
+    "clean": "npm run clean:dist",
+    "clean:dist": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./remove-dist-dir.ps1",
+    "move": "npm run move:assets",
+    "move:assets": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./move-assets.ps1"
   },
   "repository": {
     "type": "git",
@@ -22,6 +27,10 @@
   ],
   "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
   "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^5.0.2",
+    "@angular/core": "^5.0.2"
+  },
   "dependencies": {
     "@angular/common": "^5.0.2",
     "@angular/core": "^5.0.2"
