@@ -1,10 +1,7 @@
-import { NgModule, ModuleWithProviders, NO_ERRORS_SCHEMA } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { loggingServiceConfig } from './logging.service.config'
-import { LoggingService } from './logging.service'
+import { NgModule, ModuleWithProviders, NO_ERRORS_SCHEMA } from "@angular/core";
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [],
   declarations: [],
   exports: [],
   schemas: [NO_ERRORS_SCHEMA]

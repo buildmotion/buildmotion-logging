@@ -36,8 +36,10 @@
       "./src/app/index.ts"
     ],
     "angularCompilerOptions": {
+      "annotateForClosureCompiler": true,
+      "strictMetadataEmit": true,
       "skipTemplateCodegen": true,
-          "strictMetadataEmit": true,
-          "genDir": "aot-dist"
+      "flatModuleOutFile": "buildmotion-logging.js",
+      "flatModuleId": "buildmotion-logging"
     }
   }
