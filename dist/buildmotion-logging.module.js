@@ -17,14 +17,6 @@ var BuildMotionLoggingModule = /** @class */ (function () {
             },]
         },
     ];
-    BuildMotionLoggingModule.forRoot = function (applicationName) {
-        return {
-            ngModule: BuildMotionLoggingModule,
-            providers: [
-                { provide: String, useValue: applicationName }
-            ]
-        };
-    };
     return BuildMotionLoggingModule;
 }());
 export { BuildMotionLoggingModule };

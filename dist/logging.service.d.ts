@@ -9,7 +9,6 @@ export declare class LoggingService {
     /**
      * The [LoggingService] constructor.
      */
-    constructor(applicationName: string);
     /**
      * Use this method to send a log message with severity and source information
      * to the application's logger.

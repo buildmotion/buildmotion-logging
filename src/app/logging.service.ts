@@ -5,7 +5,7 @@ import { Severity } from './severity.enum';
 
 @Injectable()
 export class LoggingService {
-    applicationName: string = 'AngularApplication';
+    applicationName: string = 'Angularlicio.us';
     serviceName: string = 'LoggingService';
     source: string;
     severity: Severity;
@@ -15,15 +15,15 @@ export class LoggingService {
     /**
      * The [LoggingService] constructor.
      */
-    constructor(
-        // @Optional() private config: loggingServiceConfig
-        applicationName: string
-    ) {
-        this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
-        if(applicationName) {
-            this.applicationName = applicationName;
-        }
-    }
+    // constructor(
+    //     // @Optional() private config: loggingServiceConfig
+    //     applicationName: string
+    // ) {
+    //     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
+    //     if(applicationName) {
+    //         this.applicationName = applicationName;
+    //     }
+    // }
 
     /**
      * Use this method to send a log message with severity and source information

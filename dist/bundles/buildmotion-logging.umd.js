@@ -13,18 +13,20 @@
 })(exports.Severity || (exports.Severity = {}));
 
 var LoggingService = /** @class */ (function () {
+    function LoggingService() {
+    }
     /**
      * The [LoggingService] constructor.
      */
-    function LoggingService(
-        // @Optional() private config: loggingServiceConfig
-        // @Optional() private config: loggingServiceConfig
-        applicationName) {
-        this.log(this.serviceName, exports.Severity.Information, "Starting logging service at: " + this.timestamp);
-        if (applicationName) {
-            this.applicationName = applicationName;
-        }
-    }
+    // constructor(
+    //     // @Optional() private config: loggingServiceConfig
+    //     applicationName: string
+    // ) {
+    //     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
+    //     if(applicationName) {
+    //         this.applicationName = applicationName;
+    //     }
+    // }
     /**
      * Use this method to send a log message with severity and source information
      * to the application's logger.
@@ -37,6 +39,18 @@ var LoggingService = /** @class */ (function () {
      * @param message
      */
     /**
+         * The [LoggingService] constructor.
+         */
+    // constructor(
+    //     // @Optional() private config: loggingServiceConfig
+    //     applicationName: string
+    // ) {
+    //     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
+    //     if(applicationName) {
+    //         this.applicationName = applicationName;
+    //     }
+    // }
+    /**
          * Use this method to send a log message with severity and source information
          * to the application's logger.
          *
@@ -48,6 +62,18 @@ var LoggingService = /** @class */ (function () {
          * @param message
          */
     LoggingService.prototype.log = /**
+         * The [LoggingService] constructor.
+         */
+    // constructor(
+    //     // @Optional() private config: loggingServiceConfig
+    //     applicationName: string
+    // ) {
+    //     this.log(this.serviceName, Severity.Information, `Starting logging service at: ${this.timestamp}`);
+    //     if(applicationName) {
+    //         this.applicationName = applicationName;
+    //     }
+    // }
+    /**
          * Use this method to send a log message with severity and source information
          * to the application's logger.
          *
@@ -84,14 +110,6 @@ var BuildMotionLoggingModule = /** @class */ (function () {
             },]
         },
     ];
-    BuildMotionLoggingModule.forRoot = function (applicationName) {
-        return {
-            ngModule: BuildMotionLoggingModule,
-            providers: [
-                { provide: String, useValue: applicationName }
-            ]
-        };
-    };
     return BuildMotionLoggingModule;
 }());
 
