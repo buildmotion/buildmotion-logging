@@ -5,7 +5,7 @@ export declare class LoggingService {
     source: string;
     severity: Severity;
     message: string;
-    private timestamp;
+    timestamp: Date;
     /**
      * The [LoggingService] constructor.
      */
