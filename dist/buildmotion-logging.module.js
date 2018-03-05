@@ -3,6 +3,7 @@
  * @suppress {checkTypes} checked by tsc
  */
 import { NgModule, ModuleWithProviders, NO_ERRORS_SCHEMA } from "@angular/core";
+import { CommonModule } from "@angular/common";
 var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
     }
