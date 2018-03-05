@@ -3,7 +3,7 @@
   "version": "3.1.1",
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
   "main": "index.js",
-  "module": "./buildmotion-logging.js",
+  "module": "buildmotion-logging.js",
   "typings": "buildmotion-logging.d.ts",
   "jsnext:main": "index.js",
   "types": "index.d.ts",

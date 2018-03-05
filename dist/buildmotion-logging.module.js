@@ -7,6 +7,14 @@ import { CommonModule } from "@angular/common";
 var BuildMotionLoggingModule = /** @class */ (function () {
     function BuildMotionLoggingModule() {
     }
+    BuildMotionLoggingModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [],
+                    declarations: [],
+                    exports: [],
+                    providers: []
+                },] },
+    ];
     return BuildMotionLoggingModule;
 }());
 export { BuildMotionLoggingModule };
