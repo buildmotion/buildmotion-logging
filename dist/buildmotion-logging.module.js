@@ -9,10 +9,12 @@ var BuildMotionLoggingModule = /** @class */ (function () {
     }
     BuildMotionLoggingModule.decorators = [
         { type: NgModule, args: [{
-                    imports: [],
+                    imports: [
+                        CommonModule
+                    ],
                     declarations: [],
                     exports: [],
-                    providers: []
+                    schemas: [NO_ERRORS_SCHEMA],
                 },] },
     ];
     return BuildMotionLoggingModule;
