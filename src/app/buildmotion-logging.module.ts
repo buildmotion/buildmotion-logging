@@ -1,7 +1,10 @@
 import { NgModule, ModuleWithProviders, NO_ERRORS_SCHEMA } from "@angular/core";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   declarations: [],
   exports: [],
   schemas: [NO_ERRORS_SCHEMA]

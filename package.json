@@ -4,6 +4,7 @@
   "description": "An Angular custom module that contains logging elements for BuildMotion Angular applications...",
   "main": "index.js",
   "module": "./buildmotion-logging.js",
+  "typings": "buildmotion-logging.d.ts",
   "jsnext:main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -28,9 +29,11 @@
   "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
   "license": "MIT",
   "peerDependencies": {
+    "@angular/common": "^5.1.3",
     "@angular/core": "^5.1.3"
   },
   "dependencies": {
+    "@angular/common": "^5.1.3",
     "@angular/core": "^5.1.3"
   },
   "devDependencies": {
