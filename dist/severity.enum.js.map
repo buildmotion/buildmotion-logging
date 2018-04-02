@@ -1,1 +1,0 @@
-{"version":3,"file":"severity.enum.js","sourceRoot":"","sources":["../src/app/severity.enum.ts"],"names":[],"mappings":"","sourcesContent":["\r\nexport enum Severity {\r\n    Information = 1,\r\n    Warning = 2,\r\n    Error = 3,\r\n    Critical = 4,\r\n    Debug = 5\r\n}\r\n"]}

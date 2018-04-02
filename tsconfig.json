@@ -33,7 +33,7 @@
       "experimentalDecorators": true
     },
     "files": [
-      "./src/app/index.ts"
+      "./public_api.ts"
     ],
     "angularCompilerOptions": {
       "annotateForClosureCompiler": true,

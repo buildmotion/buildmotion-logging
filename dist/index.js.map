@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/app/index.ts"],"names":[],"mappings":";;;;AAAA,wEAA6C;AAC7C,mDAAkC;AAClC,2CAAgC","sourcesContent":["export * from './buildmotion-logging.module';\r\nexport * from './logging.service';\r\nexport * from './severity.enum';\r\n"]}
